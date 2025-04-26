@@ -1,0 +1,19 @@
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    height: 100vh; /* full screen height */
+    background-color: #9EC6F3;
+  }
+
+.btn{
+  border: 0 !important;
+  margin-top: 1rem;
+}
+
+.btns{
+  display: flex;
+  flex-direction: column;
+  padding-top: 2rem;
+}
+

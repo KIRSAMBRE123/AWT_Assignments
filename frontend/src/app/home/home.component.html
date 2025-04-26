@@ -1,0 +1,13 @@
+<div class="body" style="margin-left: 10px;">
+  <div *ngFor="let data of noticeData">
+    <div class="card mt-4" style="border: 1px solid #ddd; border-radius: 12px; background-color: #fff;">
+      <div class="card-body">
+        <h5 class="card-title" style="color: #5a5a5a;">{{ data.title }}</h5>
+        <h6 class="card-subtitle mb-2 text-muted" style="color: #777;">{{ data.category }}</h6>
+        <p class="card-text" style="color: #555;">{{ data.description }}</p>
+        <p class="card-text" style="color: #777;">{{ data.date | date:'short' }}</p>
+        <a [routerLink]="['/app-notice-details', data._id]" style="color: #f9c74f; text-decoration: none;">More Info</a>
+      </div>
+    </div>
+  </div>    
+</div>

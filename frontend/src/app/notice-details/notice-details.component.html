@@ -1,0 +1,14 @@
+<div class="card-container" *ngIf="this.login">
+  <div class="card w-80" style="background-color: #f4f4f9; border-radius: 8px;">
+    <div class="card-body">
+      <h5 class="card-title" style="color: #5a5a5a;">Title: <br>{{ data.title }}</h5>
+      <p class="card-text" style="color: #777;">Description: <br><i>{{ data.description }}</i></p>
+      <p class="card-text" style="color: #555;">Category: <br>{{ data.category }}</p>
+      <p class="card-text" style="color: #555;">Date: <br>{{ data.date | date:'short' }}</p>
+      <div class="btns" [hidden]="isDisable()">
+        <button [routerLink]="['/edit', data._id]" class="btn btn-warning" style="background-color: #f9c74f; border: none; color: white;">Edit</button>
+        <a (click)="delete(data._id)" class="btn btn-danger" style="background-color: #f94144; color: white;">Delete</a>
+      </div>
+    </div>
+  </div>
+</div>

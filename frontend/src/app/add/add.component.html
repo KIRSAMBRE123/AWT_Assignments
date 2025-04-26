@@ -1,0 +1,32 @@
+<div class="border-3 p-5 m-5" style="border: 2px solid #ddd; border-radius: 30px; background-color: #f4f4f9;">
+  <h1 class="text-center" style="color: #5a5a5a;">Add Notice</h1>
+  <form>
+    <div class="mb-3">
+      <label for="title" class="form-label" style="color: #555;">Title:</label>
+      <input type="text" name="title" id="title" [(ngModel)]="data.title" class="form-control" style="background-color: #fff; border: 1px solid #ddd;">
+    </div>
+
+    <div class="mb-3">
+      <label for="description" class="form-label" style="color: #555;">Description:</label>
+      <textarea name="description" id="description" [(ngModel)]="data.description" class="form-control" style="background-color: #fff; border: 1px solid #ddd;"></textarea>
+    </div>
+
+    <div class="mb-3">
+      <label for="category" class="form-label" style="color: #555;">Category:</label>
+      <select id="category" name="category" [(ngModel)]="data.category" class="form-control" style="background-color: #fff; border: 1px solid #ddd;">
+        <option value="General">General</option>
+        <option value="Placement">Placement</option>
+        <option value="Exam">Exam</option>
+      </select>
+    </div>
+
+    <div class="form-group mb-3">
+      <label for="date" class="form-label" style="color: #555;">Date:</label>
+      <input type="datetime-local" name="date" id="date" [(ngModel)]="data.date" class="form-control" style="background-color: #fff; border: 1px solid #ddd;">
+    </div>
+
+    <div class="d-grid">
+      <button (click)="addData()" class="btn" style="background-color: #f9c74f; color: white;">Submit</button>
+    </div>
+  </form>
+</div>

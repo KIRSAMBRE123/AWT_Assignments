@@ -1,0 +1,18 @@
+<div class="container vh-100 d-flex justify-content-center align-items-center">
+  <div class="card shadow p-4" style="background-color: #f4f4f9; min-width: 350px; border-radius: 8px;">
+    <h3 class="text-center mb-4" style="color: #5a5a5a;">Login</h3>
+    <form (ngSubmit)="login()">
+      <div class="mb-3">
+        <label for="email" class="form-label" style="color: #555;">Email Address</label>
+        <input type="email" class="form-control" id="email" [(ngModel)]="userData.email" name="email" required placeholder="Enter your email" style="background-color: #fff; border: 1px solid #ddd;">
+      </div>
+      <div class="mb-3">
+        <label for="password" class="form-label" style="color: #555;">Password</label>
+        <input type="password" class="form-control" id="password" [(ngModel)]="userData.password" name="password" required placeholder="Enter your password" style="background-color: #fff; border: 1px solid #ddd;">
+      </div>
+      <div class="d-grid">
+        <button type="submit" class="btn" style="background-color: #f94144; color: white;">Login</button>
+      </div>
+    </form>
+  </div>
+</div>
